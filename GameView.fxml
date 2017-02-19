@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="639.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameview.Controller">
+   <children>
+      <BorderPane prefHeight="255.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar fx:id="menubar" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="savas" mnemonicParsing="false" onAction="#saveas" text="Save As" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#getColorHelp" text="Changing Color" />
+                        <MenuItem mnemonicParsing="false" onAction="#getSizeHelp" text="Changeing Size" />
+                        <MenuItem mnemonicParsing="false" onAction="#getBackHelp" text="Changing background" />
+                        <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <StackPane fx:id="back" BorderPane.alignment="CENTER">
+               <children>
+                  <Canvas fx:id="maincanvas" height="591.0" width="745.0" />
+               </children>
+            </StackPane>
+         </center>
+         <bottom>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="tfield" prefHeight="26.0" prefWidth="450.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="submitbut" mnemonicParsing="false" onAction="#submitTest" prefHeight="15.0" prefWidth="101.0" text="Submit" HBox.hgrow="NEVER" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
